@@ -8,8 +8,9 @@ import time
 #FUNCIONES
 
 def clear():
-	time.sleep(3)
-	os.system('clear')
+	time.sleep(2)
+	os.system('clear') #Linux
+	#os.system('clr') #Windows
 
 def limpiar_string(Pal):
 	palmin = Pal.lower()
