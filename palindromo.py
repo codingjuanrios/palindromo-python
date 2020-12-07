@@ -1,9 +1,15 @@
 #IMPORT
 import json
 import random
+import os
+import time
 
 
 #FUNCIONES
+
+def clear():
+	time.sleep(3)
+	os.system('clear')
 
 def limpiar_string(Pal):
 	palmin = Pal.lower()
@@ -24,13 +30,10 @@ def comprobar_palindromo(paloriginal,palcomprobar):
 def palindromo_de_regalo():
 
 	with open("listado.json", "r") as read_file:
-    	listado = json.load(read_file)
-
-    print("Muchas gracias por usar nuestro script")
-
-    print("Aquí tiene un palíndromo de regalo:")
-
-	print(random.choice(listado))
+		listado = json.load(read_file)
+		print('Muchas gracias por usar nuestro script')
+		print('Aquí tiene un palíndromo de regalo:')
+		print(random.choice(listado)['palindromo'])
 
 
 #PROGRAMA PRINCIPAL
@@ -58,12 +61,16 @@ while programa:
 	elif continuar == "n" or continuar == "N":
 		print("¡Adios!")
 
+		clear()
+
 		palindromo_de_regalo()
 
 		programa = False
 
 	else:
 		print("No te he entendido, así que me las piro")
+
+		clear()
 
 		palindromo_de_regalo()
 
