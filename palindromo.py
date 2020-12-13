@@ -30,7 +30,7 @@ def comprobar_palindromo(paloriginal,palcomprobar):
 
 def palindromo_de_regalo():
 
-	with open("listado.json", "r") as read_file:
+	with open("listado.json", "r", encoding="utf-8") as read_file:
 		listado = json.load(read_file)
 		print('Muchas gracias por usar nuestro script')
 		print('Aquí tiene un palíndromo de regalo:')
